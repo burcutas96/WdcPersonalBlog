@@ -121,16 +121,60 @@ a.navbar-brand{
     transition: .3s ease-in-out;
 }
 
+.offcanvas .navbar-nav .nav-item.dropdown:hover .dropdown-menu{
+    display: inline-block;
+    animation: slideDown 0.4s ease-in-out;
+}
+
+.offcanvas .navbar-nav .nav-item.dropdown:hover .dropdown-menu a{
+    color: var(--space);
+}
+
+.dropdown-menu{
+    display: none;
+    width: 160px;
+    top: 63px;
+    left: 0;
+}
+
 .offcanvas .navbar-nav .nav-item a{
     color: var(--black);
     padding: 2.2rem 2rem !important;
     display: inline-block;
     font-size: 1.2rem;
-    font-weight: 400 !important;
+    font-weight: 500 !important;
     letter-spacing: .1rem;
     font-family: 'Inter', sans-serif !important;
 }
 
+.offcanvas .navbar-nav .dropdown-menu a{
+    padding: 2rem 1.8rem !important;
+}
+
+.offcanvas .navbar-nav .dropdown-menu a:hover{
+    color: var(--vintage) !important;
+}
+
+.offcanvas .navbar-nav .nav-item.dropdown a::after{
+    display: none;
+}
+
+.offcanvas .navbar-nav .dropdown-item:active {
+    background-color: transparent;
+}
+
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 
 @media (max-width:991.9px) {
@@ -143,7 +187,7 @@ a.navbar-brand{
     }
 
     .navbar-brand img {
-        width: 300px;
+        width: 310px;
     }
 
     .offcanvas{
@@ -155,12 +199,16 @@ a.navbar-brand{
         width: 100%;
         padding: 1.7rem 2rem !important;
     }
+
+    .dropdown-menu{
+        width: 100%;
+    }
 }
 
 
 @media (max-width: 767.9px) {
     .custom-container{
-        padding: 0rem 7rem;
+        padding: 0rem 6rem;
     }
 
     #navigation {
@@ -168,7 +216,7 @@ a.navbar-brand{
     }
 
     .navbar-brand img {
-        width: 250px;
+        width: 260px;
     }
 }
 
@@ -179,7 +227,7 @@ a.navbar-brand{
     }
 
     .navbar-brand img {
-        width: 200px;
+        width: 210px;
     }
 
     .offcanvas{
@@ -198,7 +246,7 @@ a.navbar-brand{
     }
 
     .navbar-brand img {
-        width: 180px;
+        width: 190px;
     }
 
     #navigation button {
@@ -221,7 +269,7 @@ a.navbar-brand{
     }
     
     .navbar-brand img {
-        width: 165px;
+        width: 175px;
     }
 
     .offcanvas{
