@@ -9,41 +9,79 @@
     <link rel="stylesheet" href="css/custom/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-
+    <script src="https://kit.fontawesome.com/437bb43714.js" crossorigin="anonymous"></script>
 </head>
 
 <body id="pageBody">
 
     <!-- Navbar -->
-    <section class="navigation fixed-top">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-lg">
-                <a href="#pageBody" class="navbar-brand text-uppercase">Burcu</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#myNavbar">
-                    <i class="bi bi-list"></i>
-                </button>
-
-                <div class="offcanvas offcanvas-end" id="myNavbar">
-                    <div class="offcanvas-header">
-                        <span class="offcanvas-title btn-close-canvas navbar-brand text-uppercase">Burcu</span>
-                        <button type="button" class="text-reset" data-bs-dismiss="offcanvas">
-                            <i class="bi bi-x"></i>
-                        </button>
+    <header id="navigation" class="custom-container fixed-top">
+        <nav class="navbar-expand-lg">
+            <div class="row">
+                <div class="col social-links">
+                    <div class="nav-social-media">
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a href="#home" class="nav-link btn-close-canvas text-uppercase">Home</a></li>
-                            <li class="nav-item"><a href="#blog" class="nav-link btn-close-canvas text-uppercase">Blog</a></li>
-                            <li class="nav-item"><a href="#features" class="nav-link btn-close-canvas text-uppercase">Features</a></li>
-                            <li class="nav-item"><a href="#aboutme" class="nav-link btn-close-canvas text-uppercase">About Me</a></li>
-                            <li class="nav-item"><a href="#contact" class="nav-link btn-close-canvas text-uppercase">Contact</a></li>
-                        </ul>
+                <div class="col d-flex justify-content-between">
+                    <a href="#pageBody" class="navbar-brand text-uppercase">
+                        <img src="images/Logo.svg" alt="Burcu Taş">
+                    </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#myNavbar">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+
+                <div class="col social-links">
+                    <div class="nav-social-media justify-content-end d-flex">
+                        <a href="#">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-md-0 mt-lg-5">
+                <div class="container-lg">
+                    <div class="offcanvas offcanvas-end" id="myNavbar">
+                        <div class="offcanvas-header">
+                            <span class="offcanvas-title btn-close-canvas navbar-brand text-uppercase">Menu</span>
+                            <button type="button" class="text-reset" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </div>
+    
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item"><a href="#home" class="nav-link btn-close-canvas text-uppercase">Home</a></li>
+                                <li class="nav-item"><a href="#blog" class="nav-link btn-close-canvas text-uppercase">Blog</a></li>
+                                <li class="nav-item"><a href="#lifestyle" class="nav-link btn-close-canvas text-uppercase">Lifestyle</a></li>
+                                <li class="nav-item"><a href="#features" class="nav-link btn-close-canvas text-uppercase">Features</a></li>
+                                <li class="nav-item"><a href="#interview" class="nav-link btn-close-canvas text-uppercase">Interview</a></li>
+                                <li class="nav-item"><a href="#aboutme" class="nav-link btn-close-canvas text-uppercase">About Me</a></li>
+                                <li class="nav-item"><a href="#contact" class="nav-link btn-close-canvas text-uppercase">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
-    </section>
+    </header>
+    
+    <main class="custom-container">
+    </main>
 
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/custom/script.js"></script>
