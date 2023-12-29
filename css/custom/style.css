@@ -12,6 +12,7 @@ html {
     --black: #000000;
     --space: #333333;
     --vintage: #e6a484;
+    --white: #ffffff
 }
 
 .custom-container{
@@ -137,6 +138,11 @@ a.navbar-brand{
     left: 0;
 }
 
+.nav-link:focus-visible {
+    outline: transparent;
+    box-shadow: none;
+}
+
 .offcanvas .navbar-nav .nav-item a{
     color: var(--black);
     padding: 2.2rem 2rem !important;
@@ -177,7 +183,134 @@ a.navbar-brand{
 }
 
 
+/* Blog Carousel */
+
+.news-img-box{
+    margin-top: 2.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.news-img-box img{
+    width: 100%;
+    height: 600px;
+}
+
+.news-img-box .prev-button,
+.news-img-box .next-button{
+    position: absolute;
+    top: 50%;
+    transform: translateX(50%);
+}
+
+.news-img-box .next-button{
+    right: 70px;
+}
+
+.news-img-box i{
+    font-size: 3rem;
+    padding: 2rem;
+    opacity: .9;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.news-img-box i.bi-diamond{
+    padding: 0;
+}
+
+.news-img-box .carousel-control-prev,
+.news-img-box .carousel-control-next{
+    position: static;
+    width: 100%;
+}
+
+.news-img-box .carousel-control-prev:focus,
+.news-img-box .carousel-control-next:focus{
+    opacity: .9;
+}
+
+.news-img-box i:hover,
+.news-img-box i:hover{
+    background-color: var(--vintage);
+}
+
+
+.news-img-box i.bi-diamond:hover,
+.news-img-box i.bi-diamond:hover{
+    background-color: transparent;
+}
+
+.carousel-caption {
+    bottom: auto; 
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 450px;
+    padding: 3rem 3.2rem;
+    background-color: #ffffffb0;
+    border-radius: 20px;
+}
+
+.carousel-caption span{
+    font-size: 2.5rem;
+    font-family: 'Crimson Text', serif;
+    color: var(--black);
+    line-height: 3.5rem;
+    font-weight: 600;
+}
+
+.carousel-caption p{
+    font-size: 1.2rem;
+    color: #706868;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.carousel-caption .bi-diamond{
+    font-size: 1.3rem;
+    display: block;
+    position: relative;
+    color: var(--space);
+    top: -2px;
+}
+
+.carousel-caption i span::before, 
+.carousel-caption i span::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background-color: var(--space);
+    top: 20px;
+}
+
+.carousel-caption i span::before {
+    left: 105px;
+}
+
+.carousel-caption i span::after {
+    right: 107px;
+}
+
+.carousel-caption button{
+    font-size: 1.5rem;
+    background-color: var(--vintage);
+    font-weight: 600;
+    padding: 1.1rem 1.6rem;
+    color: white;
+    margin-top: 5px;
+    transition: all .3s ease-in-out;
+}
+
+.carousel-caption button:hover{
+    background-color: #edbca4;
+}
+
+
 @media (max-width:991.9px) {
+    .custom-container {
+        padding: 0rem 6.5rem;
+    }
+
     #navigation {
         padding-top: 1rem;
     }
@@ -203,12 +336,55 @@ a.navbar-brand{
     .dropdown-menu{
         width: 100%;
     }
+
+    .carousel-caption {
+        width: 370px;
+        padding: 2.5rem 2.7rem;
+    }
+
+    .carousel-caption span {
+        font-size: 2.3rem;
+        line-height: 3.1rem;
+    }
+
+    .carousel-caption i span::before, 
+    .carousel-caption i span::after {
+        width: 65px;
+        top: 16px;
+        height: .7px;
+    }
+
+    .carousel-caption i span::before {
+        left: 77px;
+    }
+
+    .carousel-caption i span::after {
+        right: 79px;
+    }
+
+    .carousel-caption button {
+        font-size: 1.4rem;
+        padding: 1rem 1.4rem;
+    }
+
+    .news-img-box i {
+        font-size: 2.6rem;
+        padding: 1.7rem;
+    }
+
+    .news-img-box .next-button {
+        right: 50px;
+    }
+
+    .news-img-box .prev-button {
+        left: -8px;
+    }
 }
 
 
 @media (max-width: 767.9px) {
     .custom-container{
-        padding: 0rem 6rem;
+        padding: 0rem 4rem;
     }
 
     #navigation {
@@ -218,12 +394,55 @@ a.navbar-brand{
     .navbar-brand img {
         width: 260px;
     }
+
+    .news-img-box img {
+        height: 550px;
+    }
+}
+
+
+@media (max-width: 652.9px) {
+    .carousel-caption {
+        width: 325px;
+        padding: 2.1rem 2.3rem;
+    }
+
+    .carousel-caption span {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+
+    .carousel-caption i span::before {
+        left: 58px;
+    }
+
+    .carousel-caption i span::after {
+        right: 60px;
+    }
+
+    .carousel-caption i span::before, 
+    .carousel-caption i span::after {
+        top: 14px;
+    }
+
+    .news-img-box img {
+        height: 500px;
+    }
+
+    .news-img-box i {
+        font-size: 2.3rem;
+        padding: 1.3rem;
+    }
+
+    .news-img-box .next-button {
+        right: 35px;
+    }
 }
 
 
 @media (max-width:577.9px) {
     .custom-container{
-        padding: 0rem 4rem;
+        padding: 0rem 1.8rem;
     }
 
     .navbar-brand img {
@@ -233,12 +452,34 @@ a.navbar-brand{
     .offcanvas{
         width: 375px !important;
     }
+    
+    .news-img-box .prev-button,
+    .news-img-box .next-button{
+        display: none;
+    }
+
+    .carousel-caption {
+        width: 305px;
+        padding: 1.8rem 2.1rem;
+    }
+
+    .carousel-caption i span::before, .carousel-caption i span::after {
+        width: 60px;
+    }
+
+    .carousel-caption i span::after {
+        right: 57px;
+    }
+
+    .carousel-caption i span::before {
+        left: 55px;
+    }
 }
 
 
 @media (max-width:437.9px) {
     .custom-container{
-        padding: 0rem 3rem;
+        padding: 0rem 1rem;
     }
 
     .offcanvas{
@@ -257,7 +498,7 @@ a.navbar-brand{
 
 @media (max-width:378.9px) {
     .custom-container{
-        padding: 0rem 2rem;
+        padding: 0;
     }
 
     #navigation {
@@ -286,5 +527,81 @@ a.navbar-brand{
 
     #navigation button .bi-x {
         font-size: 4.4rem;
+    }
+
+    .news-img-box img {
+        height: 450px;
+    }
+
+    .carousel-caption {
+        width: 285px;
+        padding: 1.6rem 1.8rem;
+    }
+
+    .carousel-caption span {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .carousel-caption .bi-diamond {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption i span::before, 
+    .carousel-caption i span::after {
+        width: 55px;
+    }
+
+    .carousel-caption i span::after {
+        right: 56px;
+    }
+
+    .carousel-caption button {
+        font-size: 1.2rem;
+        padding: .8rem 1.2rem;
+    }
+}
+
+
+@media (max-width:322.9px) {
+    .news-img-box img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        width: 250px;
+        padding: 1.2rem 1.4rem;
+    }
+
+    .carousel-caption span {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+
+    .carousel-caption i span::before, 
+    .carousel-caption i span::after {
+        width: 48px;
+        top: 11px;
+    }
+
+    .carousel-caption i span::before {
+        left: 49px;
+    }
+
+    .carousel-caption i span::after {
+        right: 49px;
+    }
+
+    .news-img-box i.bi-diamond {
+        margin-top: .2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-caption button {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.1rem;
     }
 }
