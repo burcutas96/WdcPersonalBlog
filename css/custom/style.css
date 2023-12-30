@@ -11,13 +11,35 @@ html {
 :root{
     --black: #000000;
     --space: #333333;
+    --shades: #8c8c8c;
+    --graphite: #222222b3;
     --vintage: #e6a484;
-    --white: #ffffff
+    --halloween: #edbca4;
+    --white: #ffffff;
+    --sky: #ffffffb0;
 }
 
-.custom-container{
-    padding: 0rem 10rem;
+.mt-6{
+    margin-top: 4.2rem;
 }
+
+.mt-7{
+    margin-top: 7rem;
+}
+
+.title {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    color: var(--vintage);
+    font-weight: 400;
+    letter-spacing: .2rem;
+    font-size: 4.5rem;
+    font-style: italic;
+    position: relative;
+}
+
 
 
 /* Navbar */
@@ -187,7 +209,6 @@ a.navbar-brand{
 
 .news-img-box{
     margin-top: 2.5rem;
-    margin-bottom: 4.5rem;
 }
 
 .news-img-box img{
@@ -247,7 +268,7 @@ a.navbar-brand{
     transform: translate(-50%, -40%);
     width: 450px;
     padding: 3rem 3.2rem;
-    background-color: #ffffffb0;
+    background-color: var(--sky);
     border-radius: 20px;
 }
 
@@ -261,7 +282,7 @@ a.navbar-brand{
 
 .carousel-caption p{
     font-size: 1.2rem;
-    color: #706868;
+    color: var(--shades);
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -296,19 +317,108 @@ a.navbar-brand{
     background-color: var(--vintage);
     font-weight: 600;
     padding: 1.1rem 1.6rem;
-    color: white;
+    color: var(--white);
     margin-top: 5px;
     transition: all .3s ease-in-out;
 }
 
 .carousel-caption button:hover{
-    background-color: #edbca4;
+    background-color: var(--halloween);
 }
 
 
+/* Blogs */
+
+#blogs .col-sm-3,
+#blogs .col-sm-5,
+#blogs .col-md-7,
+#blogs .col-md-9{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#blogs .blog-img img{
+    width: 100%;
+    height: 350px;
+}
+
+#blogs .blog-text{
+    margin-left: 20px;
+    height: 100%;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#blogs .blog-title{
+    font-family: 'Crimson Text', serif;
+    font-size: 3.5rem;
+    position: relative;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--vintage);
+}
+
+#blogs .blog-explanation{
+    margin-top: 25px;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif !important;
+    color: var(--space);
+}
+
+#blogs .blog-footer{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#blogs .date{
+    font-size: 1.2rem;
+    color: var(--shades);
+}
+
+#blogs button{
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--space);
+    border-radius: 0;
+    padding: 0.5rem 0.3rem;
+}
+
+:not(.btn-check) + .btn:active {
+    border-color: transparent;
+}
+
+#blogs button:hover{
+    color: var(--vintage);
+    border-bottom-color: var(--vintage);
+}
+
+
+@media (max-width:1199.9px) {
+    .title {
+        font-size: 4.3rem;
+    }
+
+    #blogs .blog-title{
+        font-size: 3.1rem;
+        padding-bottom: 22px;
+    }
+
+    #blogs .blog-explanation{
+        margin-top: 22px;
+        font-size: 1.3rem;
+    }
+
+    #blogs button{
+        font-size: 1rem;
+    }
+}
+
 @media (max-width:991.9px) {
-    .custom-container {
-        padding: 0rem 6.5rem;
+    .title {
+        font-size: 3.9rem;
     }
 
     #navigation {
@@ -379,14 +489,24 @@ a.navbar-brand{
     .news-img-box .prev-button {
         left: -8px;
     }
+
+    #blogs .blog-title {
+        font-size: 2.9rem;
+        padding-bottom: 20px;
+    }
+
+    #blogs .blog-explanation {
+        margin-top: 20px;
+        font-size: 1.2rem;
+    }
+
+    #blogs .date {
+        font-size: 1.1rem;
+    }
 }
 
 
 @media (max-width: 767.9px) {
-    .custom-container{
-        padding: 0rem 4rem;
-    }
-
     #navigation {
         padding-top: .8rem;
     }
@@ -402,6 +522,10 @@ a.navbar-brand{
 
 
 @media (max-width: 652.9px) {
+    .title {
+        font-size: 3.7rem;
+    }
+
     .carousel-caption {
         width: 325px;
         padding: 2.1rem 2.3rem;
@@ -440,11 +564,7 @@ a.navbar-brand{
 }
 
 
-@media (max-width:577.9px) {
-    .custom-container{
-        padding: 0rem 1.8rem;
-    }
-
+@media (max-width:575.9px) {
     .navbar-brand img {
         width: 210px;
     }
@@ -474,12 +594,48 @@ a.navbar-brand{
     .carousel-caption i span::before {
         left: 55px;
     }
+
+    #blogs .blog-img{
+        display: flex;
+        justify-content: center;
+    }
+
+    #blogs .blog-img img{
+        width: 80%;
+    }
+
+    #blogs .blog-title {
+        font-size: 2.7rem;
+        padding-bottom: 12px;
+    }
+
+    #blogs .col-sm-5{
+        display: flex;
+        justify-content: center;
+    }
+
+    #blogs .blog-text {
+        margin-left: 0px;
+        justify-content: center;
+        margin-top: 10px;
+        width: 95%;
+        text-align: center;
+    }
+
+    #blogs .blog-explanation {
+        margin-top: 12px;
+    }
+
+    #blogs .blog-footer {
+        margin-top: 5px;
+        text-align: center;
+        width: 95%;
+    }
 }
 
-
 @media (max-width:437.9px) {
-    .custom-container{
-        padding: 0rem 1rem;
+    .title {
+        font-size: 3.5rem;
     }
 
     .offcanvas{
@@ -493,12 +649,20 @@ a.navbar-brand{
     #navigation button {
         font-size: 3.3rem;
     }
+
+    #blogs .blog-img img {
+        width: 90%;
+    }
+
+    #blogs .blog-text {
+        margin-top: 7px;
+    }
 }
 
 
 @media (max-width:378.9px) {
-    .custom-container{
-        padding: 0;
+    .title {
+        font-size: 3.3rem;
     }
 
     #navigation {
@@ -559,6 +723,10 @@ a.navbar-brand{
     .carousel-caption button {
         font-size: 1.2rem;
         padding: .8rem 1.2rem;
+    }
+
+    #blogs .blog-img img {
+        width: 100%;
     }
 }
 
