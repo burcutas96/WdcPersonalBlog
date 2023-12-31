@@ -395,9 +395,9 @@ a.navbar-brand{
     justify-content: end;
 }
 
-.about img,
-.about-box,
-.about-text{
+.about img, .about-box,
+.about-text, .follow, 
+.hobby {
     width: 90%;
 }
 
@@ -483,21 +483,21 @@ a.navbar-brand{
     font-family: 'Crimson Text';
 }
 
-.follow i{
+.follow i.bi-diamond{
     position: relative;
-    width: 40%;
+    width: 44.5%;
     display: inline-block;
     font-size: 1.2rem;
     color: var(--vintage)
 }
 
-.follow i::before{
+.follow i.bi-diamond::before{
     left: 59.5px;
     position: relative;
 }
 
-.follow i span::before, 
-.follow i span::after {
+.follow i.bi-diamond span::before, 
+.follow i.bi-diamond span::after {
     content: "";
     position: absolute;
     width: 52px;
@@ -506,13 +506,47 @@ a.navbar-brand{
     top: 9px;
 }
 
-.follow i span::before {
+.follow i.bi-diamond span::before {
     left: 0px;
 }
 
-.follow i span::after {
+.follow i.bi-diamond span::after {
     right: 0px;
 }
+
+.follow-social-media{
+    width: 90%;
+    justify-content: space-evenly;
+    display: flex;
+    margin-top: 1.2rem;
+}
+
+.follow-social-media a{
+    padding: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--vintage);
+    transition: all .3s ease-in-out;
+}
+
+.follow-social-media a:nth-child(2){
+    padding-left: 1.9rem;
+    padding-right: 1.9rem;
+}
+
+.follow-social-media a:nth-child(3){
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+}
+
+.follow-social-media a:hover{
+    background-color: var(--vintage);
+}
+
+.follow-social-media a i{
+    font-size: 2.3rem;
+}
+
+
 
 
 @media (max-width:1399.9px) {
@@ -529,19 +563,38 @@ a.navbar-brand{
         width: 48px;
     }
 
-    .follow i{
-        width: 45%;
+    .follow i.bi-diamond{
+        width: 50%;
     }
 
-    .follow i::before{
+    .follow i.bi-diamond::before{
         left: 57px;
     }
 
-    .follow i span::before, 
-    .follow i span::after {
+    .follow i.bi-diamond span::before, 
+    .follow i.bi-diamond span::after {
         width: 51px;
     }
+
+    .follow-social-media a{
+        padding: 1.3rem;
+    }
+
+    .follow-social-media a:nth-child(2){
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
+    
+    .follow-social-media a:nth-child(3){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .follow-social-media a i{
+        font-size: 2.2rem;
+    }
 }
+
 
 @media (max-width:1199.9px) {
     .title {
@@ -587,10 +640,29 @@ a.navbar-brand{
         width: 41px;
     }
 
-    .follow i{
-        width: 54%;
+    .follow i.bi-diamond{
+        width: 59.5%;
+    }
+
+    .follow-social-media a{
+        padding: 1.2rem;
+    }
+
+    .follow-social-media a:nth-child(2){
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+    }
+    
+    .follow-social-media a:nth-child(3){
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+    }
+
+    .follow-social-media a i{
+        font-size: 2rem;
     }
 }
+
 
 @media (max-width:991.9px) {
     .title {
@@ -710,20 +782,85 @@ a.navbar-brand{
         font-size: 1.5rem;
     }
 
-    .follow i{
+    .follow {
+        justify-content: center;
+    }
+
+    .follow i.bi-diamond{
+        width: 44.5%;
+    }
+
+    .follow i.bi-diamond::before {
+        left: 45.5%;
+    }
+
+    .follow i.bi-diamond span::before, 
+    .follow i.bi-diamond span::after {
         width: 40%;
     }
 
-    .follow i::before {
-        left: 59.5px;
+    .follow-social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .follow-social-media a{
+        padding: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .follow-social-media a:nth-child(2){
+        padding-left: 1.9rem;
+        padding-right: 1.9rem;
+    }
+    
+    .follow-social-media a:nth-child(3){
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
+    
+    .follow-social-media a i{
+        font-size: 2.3rem;
     }
 }
+
+
+@media (max-width:909.9px){
+    .follow i.bi-diamond::before {
+        left: 44.5%;
+    }
+
+    .follow-title {
+        font-size: 3rem;
+    }
+
+    .follow-social-media a{
+        padding: 1.3rem;
+        margin-top: .7rem;
+    }
+    
+    .follow-social-media a:nth-child(2){
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+    }
+    
+    .follow-social-media a:nth-child(3){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    
+    .follow-social-media a i{
+        font-size: 2rem;
+    }
+}
+
 
 @media (min-width: 850.9px){
     .about i::before{
         left: 45.5%;
     }
 }
+
 
 @media (max-width: 767.9px) {
     #navigation {
@@ -736,6 +873,55 @@ a.navbar-brand{
 
     .news-img-box img {
         height: 550px;
+    }
+
+    .about i {
+        font-size: 1.1rem;
+    }
+
+    .about i::before {
+        left: 44%;
+    }
+
+    .about i span::before, 
+    .about i span::after {
+        width: 37%;
+    }
+
+    .follow i.bi-diamond{
+        width: 49.5%;
+    }
+
+    .follow i.bi-diamond::before {
+        left: 44.5%;
+    }
+
+    .follow i.bi-diamond span::before, 
+    .follow i.bi-diamond span::after {
+        width: 40%;
+    }
+
+    .follow-title {
+        font-size: 2.8rem;
+    }
+
+    .follow-social-media a{
+        padding: 1.15rem;
+        margin-top: .5rem;
+    }
+    
+    .follow-social-media a:nth-child(2){
+        padding-left: 1.55rem;
+        padding-right: 1.55rem;
+    }
+    
+    .follow-social-media a:nth-child(3){
+        padding-left: 1.35rem;
+        padding-right: 1.35rem;
+    }
+    
+    .follow-social-media a i{
+        font-size: 1.7rem;
     }
 }
 
@@ -780,6 +966,43 @@ a.navbar-brand{
     .news-img-box .next-button {
         right: 35px;
     }
+
+    .about-text .about-title{
+        font-size: 1rem;
+        letter-spacing: .1rem;
+    }
+
+    .about-box .about-title span {
+        font-size: 2rem;
+    }
+
+    .about i {
+        font-size: 1rem;
+        width: 55%;
+    }
+
+    .about i span::before, 
+    .about i span::after {
+        width: 37%;
+        top: 7.5px;
+    }
+
+    .about .about-skill {
+        font-size: 1.3rem;
+    }
+
+    .follow-title {
+        font-size: 2.7rem;
+    }
+
+    .follow i.bi-diamond {
+        width: 53%;
+    }
+
+    .follow i.bi-diamond span::before, 
+    .follow i.bi-diamond span::after {
+        width: 38%;
+    }
 }
 
 
@@ -802,7 +1025,8 @@ a.navbar-brand{
         padding: 1.8rem 2.1rem;
     }
 
-    .carousel-caption i span::before, .carousel-caption i span::after {
+    .carousel-caption i span::before, 
+    .carousel-caption i span::after {
         width: 60px;
     }
 
@@ -850,7 +1074,109 @@ a.navbar-brand{
         text-align: center;
         width: 95%;
     }
+
+    .about img, .about-box, 
+    .about-text, .follow, .hobby {
+        width: 80%;
+    }
+
+    .about-text .about-title {
+        font-size: 1.1rem;
+        letter-spacing: .2rem;
+    }
+
+    .about-box .about-title span {
+        font-size: 2.4rem;
+    }
+
+    .about i {
+        width: 37%;
+        font-size: 1.2rem;
+    }
+
+    .about i::before {
+        left: 45.5%;
+    }
+
+    .about i span::before, 
+    .about i span::after {
+        width: 40%;
+        top: 9px;
+    }
+
+    .about .about-skill {
+        font-size: 1.5rem;
+    }
+
+    .follow-title {
+        font-size: 3.2rem;
+    }
+
+    .follow i.bi-diamond {
+        width: 29.5%;
+    }
+
+    .follow i.bi-diamond::before {
+        left: 45.5%;
+    }
+
+    .follow-social-media a {
+        padding: 1.5rem; 
+        margin-top: 1rem;
+    }
+
+    .follow-social-media a i {
+        font-size: 2.2rem;
+    }
+
+    .follow-social-media a:nth-child(2) {
+        padding-left: 1.92rem;
+        padding-right: 1.92rem;
+    }
+
+    .follow-social-media a:nth-child(3) {
+        padding-left: 1.64rem;
+        padding-right: 1.64rem;
+    }
+
+    .follow-social-media a:nth-child(4) {
+        padding-left: 1.535rem;
+        padding-right: 1.535rem;
+    }
 }
+
+
+@media (max-width:531.9px) {
+    .about i::before {
+        left: 45%;
+    }
+
+    .about i span::before, 
+    .about i span::after {
+        width: 38%;
+    }
+
+    .follow i.bi-diamond::before {
+        left: 45%;
+    }
+}
+
+
+@media (max-width:474.9px) {
+    .about i::before {
+        left: 44.7%;
+        font-size: 1.1rem;
+    }
+
+    .follow i.bi-diamond {
+        width: 32%;
+    }
+
+    .follow i.bi-diamond::before {
+        left: 45.5%;
+    }
+}
+
 
 @media (max-width:437.9px) {
     .title {
@@ -869,12 +1195,28 @@ a.navbar-brand{
         font-size: 3.3rem;
     }
 
-    #blogs .blog-img img {
-        width: 90%;
-    }
-
     #blogs .blog-text {
         margin-top: 7px;
+    }
+
+    .about i::before {
+        left: 44%;
+        font-size: 1rem;
+    }
+
+    .follow i.bi-diamond {
+        width: 36%;
+    }
+}
+
+
+@media (max-width:400.9px) {
+    .about i {
+        width: 44%;
+    }
+
+    .about i::before {
+        left: 45.5%;
     }
 }
 
@@ -944,8 +1286,22 @@ a.navbar-brand{
         padding: .8rem 1.2rem;
     }
 
-    #blogs .blog-img img {
+    #blogs .blog-img img, .about img, 
+    .about-box,
+    .follow, .hobby{
         width: 100%;
+    }
+
+    .about-text{
+        width: 90%;
+    }
+
+    .about i {
+        width: 40%;
+    }
+
+    .about i::before {
+        left: 45%;
     }
 }
 
@@ -990,5 +1346,20 @@ a.navbar-brand{
     .carousel-caption button {
         font-size: 1.1rem;
         padding: 0.7rem 1.1rem;
+    }
+
+    .follow i.bi-diamond {
+        width: 40%;
+    }
+}
+
+
+@media (max-width: 317.9px){
+    .about i {
+        width: 42%;
+    }
+
+    .follow i.bi-diamond {
+        width: 43%;
     }
 }
