@@ -511,28 +511,29 @@ a.navbar-brand{
     grid-gap: 10px;
 }
 
-.follow-social-media a{
+.follow-social-media div{
     padding: 1.3rem;
+    cursor: pointer;
     border-radius: 50%;
     border: 1px solid var(--vintage);
     transition: all .3s ease-in-out;
 }
 
-.follow-social-media a:nth-child(2){
+.follow-social-media div:nth-child(2){
     padding-left: 1.68rem;
     padding-right: 1.68rem;
 }
 
-.follow-social-media a:nth-child(3){
+.follow-social-media div:nth-child(3){
     padding-left: 1.42rem;
     padding-right: 1.42rem;
 }
 
-.follow-social-media a:hover{
+.follow-social-media div:hover{
     background-color: var(--vintage);
 }
 
-.follow-social-media a i{
+.follow-social-media div i{
     font-size: 2rem;
 }
 
@@ -833,21 +834,21 @@ footer .copyright{
         width: 61%; 
     }
 
-    .follow-social-media a{
+    .follow-social-media div{
         padding: 1.2rem;
     }
 
-    .follow-social-media a:nth-child(2){
+    .follow-social-media div:nth-child(2){
         padding-left: 1.55rem;
         padding-right: 1.55rem;
     }
     
-    .follow-social-media a:nth-child(3){
+    .follow-social-media div:nth-child(3){
         padding-left: 1.3rem;
         padding-right: 1.3rem;
     }
 
-    .follow-social-media a i{
+    .follow-social-media div i{
         font-size: 2rem;
     }
 
@@ -1061,21 +1062,21 @@ footer .copyright{
         font-size: 3rem;
     }
 
-    .follow-social-media a{
+    .follow-social-media div{
         padding: 1.1rem;
     }
 
-    .follow-social-media a:nth-child(2){
+    .follow-social-media div:nth-child(2){
         padding-left: 1.4rem;
         padding-right: 1.4rem;
     }
     
-    .follow-social-media a:nth-child(3){
+    .follow-social-media div:nth-child(3){
         padding-left: 1.2rem;
         padding-right: 1.2rem;
     }
 
-    .follow-social-media a i{
+    .follow-social-media div i{
         font-size: 1.6rem;
     }
 
@@ -1181,21 +1182,21 @@ footer .copyright{
         left: 45.5%;
     }
 
-    .follow-social-media a{
+    .follow-social-media div{
         padding: 1rem;
     }
 
-    .follow-social-media a:nth-child(2){
+    .follow-social-media div:nth-child(2){
         padding-left: 1.29rem;
         padding-right: 1.29rem;
     }
     
-    .follow-social-media a:nth-child(3){
+    .follow-social-media div:nth-child(3){
         padding-left: 1.1rem;
         padding-right: 1.1rem;
     }
 
-    .follow-social-media a i{
+    .follow-social-media div i{
         font-size: 1.5rem;
     }
 
